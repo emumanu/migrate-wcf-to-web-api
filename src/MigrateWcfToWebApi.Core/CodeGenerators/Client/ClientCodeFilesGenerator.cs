@@ -122,9 +122,9 @@ namespace {classNamespace}
         private static HttpClient _httpClient;
         private readonly JsonSerializerSettings _jsonSerializerSettings = new JsonSerializerSettings {{TypeNameHandling = TypeNameHandling.Auto}};
 
-        public {className}(string baseUrl)
+        public {className}(HttpClient httpClient)
         {{
-            _httpClient = new HttpClient {{BaseAddress = new Uri(baseUrl)}};
+            _httpClient = httpClient;
         }}
 
 {methods}
